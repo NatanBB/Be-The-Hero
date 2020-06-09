@@ -42,14 +42,14 @@ export default function Register() {
     <div className="register-container">
       <div className="content">
         <section>
-          <img src={logo} alt="Be the Hero"/>          
+          <img src={logo} alt="Be the Hero" onClick={e => history.push('/')}/>          
           
           <h1>Cadastro</h1>
           <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG!</p>
 
           <Link className="back-link" to="/">
             <FiArrowLeft size={16} color="#E02041"/>
-            Não tenho cadastro
+            Voltar a página de login
           </Link>
 
         </section>
@@ -85,7 +85,30 @@ export default function Register() {
 
           <button className="button" type="submit">Cadastrar</button>
         </form>
+
+        <div id="modal-main" class="modal-container">
+          <div class="modal">
+            <button class="fechar">x</button>
+            <h2 class="subtitulo">Cadastrado com Sucesso!</h2>
+            <form>
+              <p class="texto_id">Seu ID de acesso é: </p>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
+
+// function iniciaModal(modalId) {
+//   const modal = document.getElementById(modalId)
+//   modal.classList.add('mostrar')
+//   modal.addEventListener('click', (e) => {
+//     if(e.target.id == modalId  || e.target.className == 'fechar') {
+//       modal.classList.remove('mostrar')
+//     }
+//   });
+// }
+
+// const cadastrar = document.querySelector('.button')
+// cadastrar.addEventListener('click', () => iniciaModal('modal-main'));

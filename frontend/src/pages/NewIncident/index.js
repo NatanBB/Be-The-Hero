@@ -38,12 +38,12 @@ export default function NewIncident() {
       alert('Erro ao cadastrar novo caso, tente novamente.')
     }
   }
-
+  
   return (
     <div className="new-incident-container">
       <div className="content">
         <section>
-          <img src={logo} alt="Be the Hero"/>          
+          <img src={logo} alt="Be the Hero" onClick={e => history.push('/profile')}/>          
           
           <h1>Cadastrar novo caso</h1>
           <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
